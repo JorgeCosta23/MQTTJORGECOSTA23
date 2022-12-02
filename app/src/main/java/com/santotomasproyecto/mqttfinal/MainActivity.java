@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //++++++++++++++++++++++++++++++++++++++++++++
-        final MqttAndroidClient mqttAndroidClient = new MqttAndroidClient(this.getApplicationContext(), "tcp://broker.emqx.io:1883", "juanito", persistence);
+        final MqttAndroidClient mqttAndroidClient = new MqttAndroidClient(this.getApplicationContext(), "tcp://broker.emqx.io:1883", "jorgeCosta", persistence);
         mqttAndroidClient.setCallback(new MqttCallback() {
             @Override
             public void connectionLost(Throwable cause) {
@@ -56,11 +56,11 @@ public class MainActivity extends AppCompatActivity {
                 public void onSuccess(IMqttToken asyncActionToken) {
                     System.out.println("Connection Success!");
                     try {
-                        System.out.println("Subscribing to prueba/st/1");
-                        mqttAndroidClient.subscribe("prueba/st/1", 0);
-                        System.out.println("Subscribed to prueba/st/1");
+                        System.out.println("Subscribing to jorge/st/ejemplo");
+                        mqttAndroidClient.subscribe("jorge/st/ejemplo", 0);
+                        System.out.println("Subscribed to jorge/st/ejemplo");
                         System.out.println("Publishing message..");
-                        mqttAndroidClient.publish("prueba/st/1", new MqttMessage("Hola profe pablo".getBytes()));
+                        mqttAndroidClient.publish("jorge/st/ejemplo", new MqttMessage("pitufo".getBytes()));
                     } catch (MqttException ex) {
 
                     }
