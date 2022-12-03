@@ -30,7 +30,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mqtt Santos Chillán"
+            android:text="Mqtt Jorge Costa"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.435"
             app:layout_constraintLeft_toLeftOf="parent"

@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                         mqttAndroidClient.subscribe("jorge/st/ejemplo", 0);
                         System.out.println("Subscribed to jorge/st/ejemplo");
                         System.out.println("Publishing message..");
-                        mqttAndroidClient.publish("jorge/st/ejemplo", new MqttMessage("pitufo".getBytes()));
+                        mqttAndroidClient.publish("jorge/st/ejemplo", new MqttMessage("Hola profesor Pablo".getBytes()));
                     } catch (MqttException ex) {
 
                     }
